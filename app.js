@@ -42,9 +42,9 @@ const rarityChances = {
 
 const rarityColors = {
   "COMMON": "white",
-  "RARE": "blue",
+  "RARE": "#00AAFF",
   "LEGENDARY": "gold",
-  "ULTRA RARE": "purple",
+  "ULTRA RARE": "#D200D2",
   "WTF": "red",
 };
 

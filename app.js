@@ -33,11 +33,11 @@ const characters = {
 };
 
 const rarityChances = {
-  "COMMON": 50,
+  "COMMON": 60,
   "RARE": 25,
-  "LEGENDARY": 5,
-  "ULTRA RARE": 15,
-  "WTF": 5,
+  "LEGENDARY": 4.7,
+  "ULTRA RARE": 10,
+  "WTF": 0.3,
 };
 
 const rarityColors = {

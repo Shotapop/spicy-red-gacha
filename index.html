@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+<link rel="stylesheet" href="styles.css">
+
+<title>SPICY RED ADULT GACHA SIM</title>
+
+</head>
+<body>
+    <div class="container">
+        <h1>SPICY RED ADULT GACHA SIM</h1>
+        <h2 id="character-name">TAP TO ROLL!</h2>
+        <img id="character-image" class="character-image" src="No Damien.png" alt="Character Image">
+        <div class="character-info" id="rarity-info"></div>
+        
+<div class="button-container">
+<button id="roll-button" class="btn btn-roll" onclick="rollCharacter()">ROLL</button>
+    <button class="btn btn-secondary" onclick="showHarem()">YOUR HAREM</button>
+    <button class="btn btn-secondary" onclick="startMinigame()">NERD GAME</button>
+</div>
+ 
+        <div class="character-info" id="roll-count">ROLLZ: 5</div>
+
+        <!-- Модальное окно для HAREM -->
+        <div id="harem-modal">
+            <h2>YOUR HAREM</h2>
+            <div id="harem-content"></div>
+        </div>
+        <div id="modal-overlay"></div>
+
+        <!-- Модальное окно для NERD GAME -->
+        <div id="nerd-game-modal">
+            <h2>NERD GAME</h2>
+            <p>GUESS A NUMBER FROM 1 TO 10</p>
+            <div id="number-buttons"></div>
+      <div id="nerd-game-result"></div>
+        </div>
+        <div id="nerd-game-overlay"></div>
+    </div>
+<!-- Модальное окно для информации о персонаже -->
+<div id="character-info-modal">
+    <h2 id="info-name"></h2>
+    <p id="info-rarity"></p>
+    <p id="info-count"></p>
+</div>
+<div id="character-info-overlay"></div>
+
+    <script src="app.js"></script>
+</body>
+</html>

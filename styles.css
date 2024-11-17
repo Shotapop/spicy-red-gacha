@@ -1,0 +1,152 @@
+/* Основной сброс стилей */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #1e1e2f, #3a3a5c);
+  color: #f5f5f5;
+  overflow-y: auto; /* Включаем вертикальную прокрутку */
+}
+
+/* Контейнер для игры */
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Выравниваем элементы сверху */
+  align-items: center;
+  padding: 20px;
+  gap: 20px;
+  min-height: 100%; /* Гарантируем, что контейнер займет всю высоту */
+}
+
+/* Основные стили текста */
+h1 {
+  font-size: 2rem;
+  text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.3);
+  margin: 10px 0;
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: #ffa500;
+  text-shadow: 1px 1px 6px rgba(255, 165, 0, 0.5);
+  transition: color 0.5s ease;
+}
+
+h2:hover {
+  color: #ff4500;
+}
+
+/* Изображение персонажа */
+.character-image {
+  max-width: 80%; /* Ограничиваем ширину изображения */
+  max-height: 40vh; /* Ограничиваем высоту до 40% высоты окна */
+  border-radius: 20px;
+  border: 5px solid rgba(255, 255, 255, 0.5);
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Анимация всплытия */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Кнопки */
+button {
+  background: linear-gradient(135deg, #ff7f50, #ff4500);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.5);
+}
+
+button:disabled {
+  background: grey;
+  color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Модальные окна */
+#harem-modal, #nerd-game-modal {
+  background: rgba(30, 30, 47, 0.9);
+  border: 3px solid #ffa500;
+  border-radius: 15px;
+  color: white;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  z-index: 1000;
+  max-width: 80%;
+  max-height: 80%;
+  overflow-y: auto;
+  box-shadow: 0 8px 16px rgba(255, 165, 0, 0.2);
+  display: none;
+}
+
+#modal-overlay, #nerd-game-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 999;
+    display: none;
+}
+
+
+/* Галерея Harem */
+.harem-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+.harem-item {
+  text-align: center;
+  width: 90px;
+}
+
+.harem-image {
+  width: 90px;
+  height: 90px;
+  border: 2px solid white;
+  border-radius: 10px;
+  object-fit: cover;
+  object-position: 5% 5%; !important 
+}
+
+/* Адаптивность */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  button {
+    font-size: 0.9rem;
+    padding: 8px 15px;
+  }
+
+  .character-image {
+    max-height: 50vh; /* Дополнительно уменьшаем изображение для маленьких экранов */
+  }
+}
